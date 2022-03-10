@@ -1,0 +1,51 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css"></link>
+        <style>
+            * { margin: 5px;}
+            @media only screen and (min-width: 900px) {
+                #main {
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+            canvas, #options {border: 1px solid black;}
+            #options {
+                min-width: 300px;
+                width: 100%;
+            }
+            #_values {
+            }
+        </style>
+        <script type="text/javascript" src="script.js" defer></script>
+    </head>
+    <body>
+        <h1>polar function animation</h1>
+        <div id="main">
+            <canvas id="canv" width="600" height="600"></canvas>
+            <div id="options">
+                <h1>options</h1>
+                <label>draw_r</label><input type="checkbox" id="draw_r">
+                <label>draw_point</label><input type="checkbox" id="draw_point">
+                <label>fill (integral/area)</label><input type="checkbox" id="fill">
+                <label>grid</label><input type="checkbox" id="grid">
+                <label>keypress</label><input type="checkbox" id="keypress"><br>
+                <label>scale</label><input type="number" id="scale"><br>
+                <label>dtheta</label><input type="number" id="dtheta"><br>
+                <label>dtime(ms)</label><input type="number" id="dtime"><br>
+                <label>range(0 - nπ)</label><input type="number" id="range"><br>
+                <label>r_width</label><input type="number" id="r_width"><br>
+                <label>f_width</label><input type="number" id="f_width"><br>
+                <label>keypress_dtheta</label><input type="number" id="keypress_dtheta"><br>
+                <label>r_color</label><input type="color" id="r_color">
+                <label>f_color</label><input type="color" id="f_color"><br>
+                <label>function</label><select id="func"></select><br>
+                <button id="toggle" onclick="toggle()">start</button>
+                <p id="values"></p>
+            </div>
+            <div id="_values"></div>
+        </div>
+    </body>
+</html>
