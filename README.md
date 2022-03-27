@@ -9,4 +9,5 @@ making them equal will make a one keypress do one calculation
 
 there are only 4 functions but they can be added pretty easily at the top of script.js  
 
-to run it just open index.html with your favorite browser.
+to run it just open index.html with your favorite browser.  
+actually, it apparently does not work on safari (webkit based browsers?)
