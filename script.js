@@ -16,7 +16,7 @@ const defaults = {
     keypress: false,
     scale: 70,
     dtheta: 0.015,
-    dtime: 1,
+    dtime: 100,
     range: 2,
     keypress_dtheta: 10,
     r_color: "#33d17a",
@@ -182,9 +182,9 @@ function draw() {
     update_values(values);
     theta += opts.dtheta;
     
-    if (running && !opts.keypress && theta <= opts.range * Math.PI) {
+    if (running && !opts.keypress && theta <= opts.range * Math.PI)
         window.setTimeout(draw, opts.dtime)
-    } else {
+    else {
         running = false;
         document.getElementById("toggle").innerText = "start";
     }
@@ -208,7 +208,7 @@ function render() {
     if (opts.fill) { 
         // create copy of main curve, go to 0, 0
         let pathfill = new Path2D(path);
-        pathfill.moveTo(offset.x, offset.y);
+        pathfill.lineTo(offset.x, offset.y);
         ctx.fill(pathfill);
     } else {
         ctx.stroke(path);
