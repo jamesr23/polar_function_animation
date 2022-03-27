@@ -16,7 +16,7 @@ const defaults = {
     keypress: false,
     scale: 70,
     dtheta: 0.015,
-    dtime: 100,
+    dtime: 1,
     range: 2,
     keypress_dtheta: 10,
     r_color: "#33d17a",
